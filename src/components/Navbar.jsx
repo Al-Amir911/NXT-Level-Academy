@@ -20,6 +20,20 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <div className="container navbar-container">
+        <div className="logo">
+          <img src="logo-icon.png" alt="NXT Level Academy Logo" className="navbar-logo-icon" />
+          <span className="logo-text">NXT Level <span className="logo-accent">Academy</span></span>
+        </div>
+
+        <div className={`nav-links ${mobileMenuOpen ? 'active' : ''}`}>
+          <a href="#hero" onClick={() => setMobileMenuOpen(false)}>{t('nav', 'home')}</a>
+          <a href="#overview" onClick={() => setMobileMenuOpen(false)}>{t('nav', 'about')}</a>
+          <a href="#programs" onClick={() => setMobileMenuOpen(false)}>{t('nav', 'programs')}</a>
           <a href="#methodology" onClick={() => setMobileMenuOpen(false)}>{t('nav', 'methodology')}</a>
           <a href="#pricing" onClick={() => setMobileMenuOpen(false)}>{t('nav', 'pricing')}</a>
           <a href="#pricing" className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('nav', 'enroll')}</a>
@@ -32,15 +46,15 @@ const Navbar = () => {
           <button className="lang-toggle" onClick={toggleLanguage}>
             {language === 'en' ? 'العربية' : 'English'}
           </button>
-        </div >
+        </div>
 
-  <div className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-    <span className="bar"></span>
-    <span className="bar"></span>
-    <span className="bar"></span>
-  </div>
-      </div >
-    </nav >
+        <div className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+      </div>
+    </nav>
   );
 };
 
