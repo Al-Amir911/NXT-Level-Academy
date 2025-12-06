@@ -28,7 +28,7 @@
 
 .logo-text {
     font-family: var(--font-heading);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--color-white);
     transition: color 0.3s ease;
@@ -45,7 +45,7 @@
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     align-items: center;
 }
 
