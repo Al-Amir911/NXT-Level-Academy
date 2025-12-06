@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faWhatsapp, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -36,6 +36,9 @@ const Navbar = () => {
           <a href="#methodology" onClick={() => setMobileMenuOpen(false)}>{t('nav', 'methodology')}</a>
           <a href="#pricing" onClick={() => setMobileMenuOpen(false)}>{t('nav', 'pricing')}</a>
           <a href="#pricing" className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>{t('nav', 'enroll')}</a>
+          <a href="https://www.facebook.com/share/16eKegk7rz/" target="_blank" rel="noopener noreferrer" className="nav-facebook" style={{ fontSize: '2rem', display: 'flex', alignItems: 'center', color: '#1877F2', marginRight: '5px' }}>
+            <FontAwesomeIcon icon={faFacebook} />
+          </a>
           <a href="https://wa.me/201110202727" target="_blank" rel="noopener noreferrer" className="nav-whatsapp" style={{ fontSize: '2rem', display: 'flex', alignItems: 'center', color: '#25D366' }}>
             <FontAwesomeIcon icon={faWhatsapp} />
           </a>

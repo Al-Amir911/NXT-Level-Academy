@@ -1,6 +1,8 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import './Footer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
     const { t } = useLanguage();
@@ -29,9 +31,12 @@ const Footer = () => {
                         <p>Cairo, Egypt</p>
                         <p>info@nxtlevelacademy.com</p>
                         <div className="social-icons">
-                            <a href="#" className="social-icon">FB</a>
-                            <a href="#" className="social-icon">IG</a>
-                            <a href="#" className="social-icon">WA</a>
+                            <a href="https://www.facebook.com/share/16eKegk7rz/" target="_blank" rel="noopener noreferrer" className="social-icon" style={{ color: '#1877F2', fontSize: '1.5rem' }}>
+                                <FontAwesomeIcon icon={faFacebook} />
+                            </a>
+                            <a href="https://wa.me/201110202727" target="_blank" rel="noopener noreferrer" className="social-icon" style={{ color: '#25D366', fontSize: '1.5rem' }}>
+                                <FontAwesomeIcon icon={faWhatsapp} />
+                            </a>
                         </div>
                     </div>
                 </div>

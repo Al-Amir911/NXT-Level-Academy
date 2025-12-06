@@ -83,8 +83,16 @@
     transition: background 0.3s ease;
 }
 
-.social-icon:hover {
-    background: var(--color-secondary);
+/* Facebook (1st icon) */
+.social-icon:nth-child(1):hover {
+    background: #1877F2;
+    color: white !important;
+}
+
+/* WhatsApp (2nd icon) */
+.social-icon:nth-child(2):hover {
+    background: #25D366;
+    color: white !important;
 }
 
 .footer-bottom {
