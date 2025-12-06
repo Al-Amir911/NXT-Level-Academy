@@ -1,0 +1,58 @@
+.programs-section {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    background-image: linear-gradient(rgba(0, 51, 102, 0.95), rgba(0, 51, 102, 0.95)), url('https://www.transparenttextures.com/patterns/cubes.png');
+}
+
+.programs-section .section-title {
+    color: var(--color-white);
+}
+
+.programs-section .section-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.programs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.program-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 30px 20px;
+    border-radius: 15px;
+    width: 200px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.program-card:hover {
+    background: var(--color-white);
+    transform: translateY(-10px);
+}
+
+.program-card:hover h3,
+.program-card:hover p {
+    color: var(--color-primary);
+}
+
+.program-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.program-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--color-white);
+}
+
+.program-card p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}

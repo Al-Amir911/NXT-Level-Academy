@@ -1,0 +1,194 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: all 0.4s ease;
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow-md);
+    padding: 15px 0;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-white);
+    transition: color 0.3s ease;
+}
+
+.navbar.scrolled .logo-text {
+    color: var(--color-primary);
+}
+
+.logo-accent {
+    color: var(--color-secondary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--color-secondary);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.navbar.scrolled .nav-links a {
+    color: var(--color-primary);
+}
+
+/* Enroll Button Overrides */
+.nav-links .btn {
+    margin-left: 10px;
+}
+
+.nav-links .btn::after {
+    display: none;
+}
+
+.nav-links .btn:hover {
+    color: var(--color-white) !important;
+}
+
+.navbar.scrolled .nav-links .btn {
+    color: var(--color-white);
+}
+
+.lang-toggle {
+    background: transparent;
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.lang-toggle:hover {
+    background: var(--color-white);
+    color: var(--color-primary);
+}
+
+.navbar.scrolled .lang-toggle {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.navbar.scrolled .lang-toggle:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--color-white);
+}
+
+.navbar.scrolled .bar {
+    background-color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--color-white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--shadow-md);
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links a {
+        color: var(--color-primary);
+        margin: 16px 0;
+        display: block;
+    }
+
+    .navbar .logo-text {
+        color: var(--color-primary);
+        /* Always dark on mobile if needed, or handle scroll */
+    }
+
+    /* Fix for mobile initial state if transparent */
+    .navbar:not(.scrolled) .nav-links {
+        top: 0;
+        height: 100vh;
+        justify-content: center;
+        background: var(--color-primary);
+    }
+
+    .navbar:not(.scrolled) .nav-links a {
+        color: var(--color-white);
+    }
+
+    .lang-toggle {
+        margin: 10px 0;
+        border-color: var(--color-primary);
+        color: var(--color-primary);
+    }
+
+    .navbar:not(.scrolled) .lang-toggle {
+        border-color: var(--color-white);
+        color: var(--color-white);
+    }
+}

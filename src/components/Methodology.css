@@ -1,0 +1,63 @@
+.methodology-section {
+    background-color: var(--color-white);
+}
+
+.method-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.method-image .method-img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease;
+}
+
+.method-image .method-img:hover {
+    transform: scale(1.02);
+}
+
+.method-list ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.method-item {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--color-text-dark);
+    background: var(--color-bg-light);
+    padding: 15px 25px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.method-item:hover {
+    transform: translateX(10px);
+    background: var(--color-white);
+    box-shadow: var(--shadow-sm);
+}
+
+.check-icon {
+    color: var(--color-secondary);
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+    .method-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .method-image {
+        order: -1;
+    }
+}
