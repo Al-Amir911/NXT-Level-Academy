@@ -26,9 +26,22 @@
     margin-right: 40px;
 }
 
+.navbar-logo-icon {
+    height: 40px !important;
+    width: auto;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+/* RTL Support for Logo Icon */
+[dir="rtl"] .navbar-logo-icon {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
 .logo-text {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: var(--color-white);
     transition: color 0.3s ease;
@@ -45,7 +58,7 @@
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     align-items: center;
 }
 
