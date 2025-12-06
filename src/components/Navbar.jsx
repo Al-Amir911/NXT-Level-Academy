@@ -48,6 +48,10 @@ const Navbar = () => {
                     </button>
                 </div>
 
+                <button className="lang-toggle mobile-lang-toggle" onClick={toggleLanguage}>
+                    {language === 'en' ? 'العربية' : 'English'}
+                </button>
+
                 <div className="hamburger" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
                     <span className="bar"></span>
                     <span className="bar"></span>

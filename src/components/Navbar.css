@@ -146,6 +146,10 @@
     background-color: #25D366;
 }
 
+.mobile-lang-toggle {
+    display: none;
+}
+
 
 
 
@@ -204,5 +208,26 @@
     .navbar:not(.scrolled) .lang-toggle {
         border-color: var(--color-white);
         color: var(--color-white);
+    }
+
+    .mobile-lang-toggle {
+        display: block;
+        margin-left: auto;
+        /* Push to right if needed, though flex container handles it */
+        margin-right: 15px;
+        border-color: var(--color-primary);
+        color: var(--color-primary);
+        padding: 5px 12px;
+        font-size: 0.9rem;
+    }
+
+    .navbar:not(.scrolled) .mobile-lang-toggle {
+        border-color: var(--color-white);
+        color: var(--color-white);
+    }
+
+    /* Hide the original toggle inside the menu on mobile */
+    .nav-links .lang-toggle {
+        display: none;
     }
 }
